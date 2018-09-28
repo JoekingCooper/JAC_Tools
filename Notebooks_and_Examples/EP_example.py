@@ -18,7 +18,8 @@ truev_caa=[-6.0165]#,6025)
 er_caa=[( 0.0800980536199,-0.0820910092786)]#,(96.24,-96.24)]
 
 GS=ep.GridSearch(truev_caa,er_caa,chromospheric_Activity_Age)
-lot=GS.errorpropagation()
+lot=GS.errorpropagation(100)
+print(lot)
 GS=ep.GridSearch(truev_rad,er_rad,stellar_radius)
-lot=GS.errorpropagation()
-print(np.array(lot)/(10**9),lot)
+lot=GS.errorpropagation(100)
+print(lot)
