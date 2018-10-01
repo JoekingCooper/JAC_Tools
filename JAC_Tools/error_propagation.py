@@ -41,7 +41,7 @@ class GridSearch:
             x=np.linspace(self.true_values[n]+ers[0],self.true_values[n]+ers[1],steps)
             for i in x:
                 self.temp_values[n]=i
-                self.loop_rec( n + 1)
+                self.loop_rec( n + 1,steps)
         else:
             R_temp=self.function(self.temp_values)
             R_true=self.function(self.true_values)
